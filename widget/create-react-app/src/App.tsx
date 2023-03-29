@@ -2,6 +2,7 @@ import { XSwapWidget } from '@xyfinance/widget'
 import '@xyfinance/widget/dist/style.css'
 
 const widgetConfig = {
+  fontFamily: 'proxima-nova',
   defaultChain: '1',
   disabledChains: ['1'],
   slippage: '5.1',
@@ -19,15 +20,15 @@ const widgetConfig = {
     {
       address: '0x666666661f9B6D8c581602AAa2f76cbead06C401',
       chainId: '56'
+    },
+    {
+      address: '0x55555555a687343c6ce28c8e1f6641dc71659fad',
+      chainId: '137'
+    },
+    {
+      address: '0x444444443b0fcb2733b93f23c910580fba52fffa',
+      chainId: '250'
     }
-    // {
-    //   address: '0x55555555a687343c6ce28c8e1f6641dc71659fad',
-    //   chainId: '137'
-    // },
-    // {
-    //   address: '0x444444443b0fcb2733b93f23c910580fba52fffa',
-    //   chainId: '250'
-    // }
   ]
 }
 

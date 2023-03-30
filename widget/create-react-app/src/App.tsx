@@ -1,10 +1,10 @@
-import { XSwapWidget } from '@xyfinance/widget'
+import { XSwapWidget, NATIVE_TOKEN_ADDRESS } from '@xyfinance/widget'
 import '@xyfinance/widget/dist/style.css'
 
 const widgetConfig = {
   fontFamily: 'proxima-nova',
-  defaultChain: '1',
-  disabledChains: ['1'],
+  defaultChain: '56',
+  disabledChains: ['1', '42161'],
   slippage: '5.1',
   fromInput: '12.345',
   referrer: '0xFD19727868A8197F42e7a52d024374598F62953B',
@@ -25,6 +25,12 @@ const widgetConfig = {
       address: '0x55555555a687343c6ce28c8e1f6641dc71659fad',
       chainId: '137'
     },
+    {
+      address: NATIVE_TOKEN_ADDRESS, // 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE
+      chainId: '250'
+    }
+  ],
+  disabledTokens: [
     {
       address: '0x444444443b0fcb2733b93f23c910580fba52fffa',
       chainId: '250'

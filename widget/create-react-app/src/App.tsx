@@ -1,49 +1,61 @@
-import { XSwapWidget, NATIVE_TOKEN_ADDRESS } from '@xyfinance/widget'
-import '@xyfinance/widget/dist/style.css'
+import { XSwapWidget } from '@xyfinance/widget'
 
-const widgetConfig = {
-  fontFamily: 'proxima-nova',
-  defaultChain: '56',
-  disabledChains: ['1', '42161'],
-  slippage: '5.1',
-  fromInput: '12.345',
-  referrer: '0xFD19727868A8197F42e7a52d024374598F62953B',
+const config = {
+  disabledChains: [],
+  fromInput: '0.123456789909099999999999999976576',
   fromToken: {
-    address: '0x444444443b0fcb2733b93f23c910580fba52fffa',
-    chainId: '250'
+    address: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    chainId: '1'
   },
   toToken: {
-    address: '0x55555555a687343c6ce28c8e1f6641dc71659fad',
-    chainId: '137'
+    address: '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE',
+    chainId: '56'
   },
   featuredTokens: [
     {
       address: '0x666666661f9B6D8c581602AAa2f76cbead06C401',
       chainId: '56'
-    },
-    {
-      address: '0x55555555a687343c6ce28c8e1f6641dc71659fad',
-      chainId: '137'
-    },
-    {
-      address: NATIVE_TOKEN_ADDRESS, // 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE
-      chainId: '250'
-    }
-  ],
-  disabledTokens: [
-    {
-      address: '0x444444443b0fcb2733b93f23c910580fba52fffa',
-      chainId: '250'
     }
   ]
 }
 
-function App() {
+const theme = {
+  mode: 'light',
+  fontFamily: 'proxima-nova',
+  borderRadius: {
+    container: '12px',
+    inner: '8px',
+    button: '32px'
+  },
+  colors: {
+    primary: '#277EEC',
+    gradient: ['#277EEC', '#1499E4']
+  },
+  components: {
+    button: {
+      variant: 'gradient'
+    }
+  }
+}
+
+export default function App() {
   return (
-    <div style={{ width: '480px', margin: '0 auto' }}>
-      <XSwapWidget config={widgetConfig} />
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        margin: '0px auto'
+      }}
+    >
+      <div
+        style={{
+          width: '480px'
+        }}
+      >
+        <XSwapWidget config={config} theme={theme} />
+      </div>
     </div>
   )
 }
-
-export default App

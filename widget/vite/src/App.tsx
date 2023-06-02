@@ -1,4 +1,4 @@
-import { XSwapWidget } from '@xyfinance/widget'
+import { XSwapWidget, Theme } from '@xyfinance/widget'
 
 const config = {
   disabledChains: [],
@@ -19,7 +19,7 @@ const config = {
   ]
 }
 
-const theme = {
+const theme: Theme = {
   mode: 'light',
   fontFamily: 'proxima-nova',
   borderRadius: {

@@ -21,7 +21,7 @@ const config = {
 
 const theme: Theme = {
   mode: 'light',
-  fontFamily: 'proxima-nova',
+  // fontFamily: 'proxima-nova',
   borderRadius: {
     container: '12px',
     inner: '8px',

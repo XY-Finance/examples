@@ -1,6 +1,8 @@
 # examples
 
-## Widget
+## widget-iframe
+
+## widget-npm
 
 Dependencies: `React ^18.2.0`
 

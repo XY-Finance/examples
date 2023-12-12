@@ -1,9 +1,9 @@
 # examples
 
-## widget-iframe
+## [iframe] Widget
 
 [docs](https://docs.xy.finance/bridge-aggregator-integration/xy-finance-widget-iframe)
 
-## widget-npm
+## [npm] Widget
 
 [docs](https://docs.xy.finance/bridge-aggregator-integration/xy-finance-widget-npm#compatibility)

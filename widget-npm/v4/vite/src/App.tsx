@@ -1,4 +1,4 @@
-import { XSwapWidget, Theme } from '@xyfinance/widget'
+import { Widget, Theme } from '@xyfinance/widget'
 
 const config = {
   disabledChains: [],
@@ -53,7 +53,7 @@ export default function App() {
           width: '480px'
         }}
       >
-        <XSwapWidget config={config} theme={theme} />
+        <Widget config={config} theme={theme} />
       </div>
     </div>
   )

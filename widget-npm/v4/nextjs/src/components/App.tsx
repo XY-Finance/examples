@@ -1,3 +1,5 @@
+'use client'
+
 import { Widget, type Theme, type Config } from '@xyfinance/widget'
 
 const config: Config = {
@@ -36,8 +38,7 @@ const theme: Theme = {
     }
   }
 }
-
-export default function App() {
+export function App() {
   return (
     <div
       style={{

@@ -1,7 +1,7 @@
 'use client' // Tell Next.js this page is a client component 👈🏽
 
 import dynamic from 'next/dynamic'
-import { Theme, Config } from '@xyfinance/widget'
+import { type Theme, type Config } from '@xyfinance/widget'
 
 const config: Config = {
   disabledChains: [],
@@ -41,8 +41,8 @@ const theme: Theme = {
   }
 }
 
-const XSwapWidgetNext = dynamic(
-  () => import('@xyfinance/widget').then((module) => module.XSwapWidget),
+const Widget = dynamic(
+  () => import('@xyfinance/widget').then((module) => module.Widget),
   {
     ssr: false
   }
@@ -64,7 +64,7 @@ export default function Home() {
           width: '480px'
         }}
       >
-        <XSwapWidgetNext config={config} theme={theme} />
+        <Widget config={config} theme={theme} />
       </div>
     </div>
   )

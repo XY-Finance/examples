@@ -1,6 +1,6 @@
-import { XSwapWidget, Theme } from '@xyfinance/widget'
+import { XSwapWidget, type Theme, type Config } from '@xyfinance/widget'
 
-const config = {
+const config: Config = {
   disabledChains: [],
   fromInput: '0.123456789909099999999999999976576',
   fromToken: {

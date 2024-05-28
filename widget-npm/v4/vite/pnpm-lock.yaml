@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@xyfinance/widget':
-    specifier: 4.x
-    version: 4.0.10(@tanstack/react-query@5.40.0)(@types/react@18.3.3)(@wagmi/connectors@5.0.6)(@wagmi/core@2.10.4)(react@18.3.1)(typescript@5.4.5)(viem@2.13.1)(wagmi@2.9.7)
+    specifier: latest
+    version: 4.1.0(@tanstack/react-query@5.40.0)(@types/react@18.3.3)(@wagmi/connectors@5.0.6)(@wagmi/core@2.10.4)(react@18.3.1)(typescript@5.4.5)(viem@2.13.1)(wagmi@2.9.7)
   react:
     specifier: ^18.2.0
     version: 18.3.1
@@ -4928,8 +4928,8 @@ packages:
     resolution: {integrity: sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==}
     dev: false
 
-  /@xyfinance/widget@4.0.10(@tanstack/react-query@5.40.0)(@types/react@18.3.3)(@wagmi/connectors@5.0.6)(@wagmi/core@2.10.4)(react@18.3.1)(typescript@5.4.5)(viem@2.13.1)(wagmi@2.9.7):
-    resolution: {integrity: sha512-MOpJi3CioSJYr+pdRapdlSdeLHBTwtLdcI/NPTgpDhkxqrAS1odhip4ihdgfIZZ+hQFpD6jyS2UstR0+Egqigg==}
+  /@xyfinance/widget@4.1.0(@tanstack/react-query@5.40.0)(@types/react@18.3.3)(@wagmi/connectors@5.0.6)(@wagmi/core@2.10.4)(react@18.3.1)(typescript@5.4.5)(viem@2.13.1)(wagmi@2.9.7):
+    resolution: {integrity: sha512-VCMDjUKvx0S8D4sAkzNpm9IlGlmwGcljGydv1RHGBVkKwMy80p8czdvVPpwtXNn+PswgNVhDGQ3ZIGrIlH+nVg==}
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
       react: '>=18'
@@ -8788,7 +8788,7 @@ packages:
     dependencies:
       object-assign: 4.1.1
       react: 18.3.1
-      react-is: 16.13.1
+      react-is: 18.3.1
     dev: false
 
   /react-universal-interface@0.6.2(react@18.3.1)(tslib@2.6.2):

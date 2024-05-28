@@ -15,8 +15,8 @@ dependencies:
     specifier: 18.2.4
     version: 18.2.4
   '@xyfinance/widget':
-    specifier: ^3.17.1
-    version: 3.17.1(@types/react@18.2.6)(@wagmi/core@1.4.13)(react@18.2.0)(typescript@5.4.3)(vite@5.2.2)
+    specifier: ^3.17.3
+    version: 3.17.3(@types/react@18.2.6)(@wagmi/core@1.4.13)(react@18.2.0)(typescript@5.4.3)(vite@5.2.2)
   next:
     specifier: ^14.2.3
     version: 14.2.3(@babel/core@7.24.3)(react-dom@18.2.0)(react@18.2.0)
@@ -2788,8 +2788,8 @@ packages:
     resolution: {integrity: sha512-N8tkAACJx2ww8vFMneJmaAgmjAG1tnVBZJRLRcx061tmsLRZHSEZSLuGWnwPtunsSLvSqXQ2wfp7Mgqg1I+2dQ==}
     dev: false
 
-  /@xyfinance/widget@3.17.1(@types/react@18.2.6)(@wagmi/core@1.4.13)(react@18.2.0)(typescript@5.4.3)(vite@5.2.2):
-    resolution: {integrity: sha512-/3/vE/qPtSHINhjIWPkza5NgKQZqR2x3xOZl9RzHw1A+6nzAE8GalXKAr89fTjUvRSH+7WGFXSwy2llP0c8iMg==}
+  /@xyfinance/widget@3.17.3(@types/react@18.2.6)(@wagmi/core@1.4.13)(react@18.2.0)(typescript@5.4.3)(vite@5.2.2):
+    resolution: {integrity: sha512-l+RbtW49rppQclwuNK1OhxARVM2+VFpbhgYxCJ5wf6Z4PlRDIkH0Dfsa7LSo39gYcdP5H9983sgfhu6w0h0AOg==}
     peerDependencies:
       react: '>=18'
     dependencies:

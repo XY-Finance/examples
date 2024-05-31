@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue'
 import queryString from 'query-string'
 
 const config = {

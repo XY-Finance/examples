@@ -16,9 +16,9 @@ const config = {
   commissionRate: 2000
 }
 
-const baseUrl = 'https://widget.xy.finance?'
+const BASE_URL = 'https://widget.xy.finance'
 const searchParams = queryString.stringify(config)
-const iframeSrc = ref(baseUrl + searchParams)
+const iframeSrc = `${BASE_URL}?${searchParams}`
 </script>
 
 <template>

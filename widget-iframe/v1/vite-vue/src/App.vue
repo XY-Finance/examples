@@ -18,6 +18,7 @@ const config = {
 const BASE_URL = 'https://widget.xy.finance'
 const searchParams = queryString.stringify(config)
 const iframeSrc = `${BASE_URL}?${searchParams}`
+// https://widget.xy.finance?amount=1&fromTokenAddress=0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE&lockmode=none&referrer&slippage=1&sourceChainId=1&targetChainId=1&theme=dark&toTokenAddress=0x77777777772cf0455fB38eE0e75f38034dFa50DE
 </script>
 
 <template>

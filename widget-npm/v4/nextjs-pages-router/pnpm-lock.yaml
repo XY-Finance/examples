@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@xyfinance/widget':
-        specifier: latest
-        version: 4.4.7(tmuuis4p5wg6refuegzfic5yuu)
+        specifier: ^4.4.8
+        version: 4.4.8(tmuuis4p5wg6refuegzfic5yuu)
       next:
         specifier: 14.2.5
         version: 14.2.5(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -1966,8 +1966,8 @@ packages:
   '@xtuc/long@4.2.2':
     resolution: {integrity: sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==}
 
-  '@xyfinance/widget@4.4.7':
-    resolution: {integrity: sha512-X1FIP2FjyMu98YxUhK4Y4G4pDggrt9w89H0NV0oLT8wk0640FUraf419qgOE04xa03Go9gu/cV+UvL/I+8uQxQ==}
+  '@xyfinance/widget@4.4.8':
+    resolution: {integrity: sha512-2UO5tsAOUGCe7dGSwNmDbhmRIq+w+Gz84nIGhDRppzSjFuCXOmo/iuYGlTZIIR8vToWF+UOdDLeqv1upJg4M3Q==}
     peerDependencies:
       '@tanstack/react-query': '>=5.0.0'
       react: '>=18'
@@ -8422,7 +8422,7 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@xyfinance/widget@4.4.7(tmuuis4p5wg6refuegzfic5yuu)':
+  '@xyfinance/widget@4.4.8(tmuuis4p5wg6refuegzfic5yuu)':
     dependencies:
       '@binance/w3w-wagmi-connector-v2': 1.2.3(bufferutil@4.0.8)(utf-8-validate@5.0.10)(viem@2.19.3(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)(zod@3.23.8))(wagmi@2.12.5(@tanstack/query-core@5.51.21)(@tanstack/react-query@5.51.23(react@18.3.1))(@types/react@18.3.3)(bufferutil@4.0.8)(immer@9.0.21)(react-dom@18.3.1(react@18.3.1))(react-native@0.74.5(@babel/core@7.25.2)(@babel/preset-env@7.25.3(@babel/core@7.25.2))(@types/react@18.3.3)(bufferutil@4.0.8)(react@18.3.1)(utf-8-validate@5.0.10))(react@18.3.1)(typescript@5.5.4)(utf-8-validate@5.0.10)(viem@2.19.3(bufferutil@4.0.8)(typescript@5.5.4)(utf-8-validate@5.0.10)(zod@3.23.8))(zod@3.23.8))
       '@coinbase/wallet-sdk': 3.9.3

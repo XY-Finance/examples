@@ -1,6 +1,14 @@
 'use client'
 
-import { Widget, type Theme, type Config } from '@xyfinance/widget'
+import { type Theme, type Config } from '@xyfinance/widget'
+import dynamic from 'next/dynamic'
+
+const Widget = dynamic(
+  () => import('@xyfinance/widget').then((module) => module.Widget),
+  {
+    ssr: false
+  }
+)
 
 const config: Config = {
   disabledChains: [],

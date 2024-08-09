@@ -1,5 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -24,17 +22,81 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Learn More
+## Troubleshooting
 
-To learn more about Next.js, take a look at the following resources:
+### [Global CSS cannot be imported from within node_modules.](https://nextjs.org/docs/messages/css-npm)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Why?
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+This is a feature of the Next.js pages router, which cannot import `.css` files directly from node_modules.
 
-## Deploy on Vercel
+The error occurs because our widget injects a `.css` file during the build process.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+#### Solution
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Install the [next-remove-imports](https://github.com/uiwjs/next-remove-imports) in your project.
+
+```
+npm install next-remove-imports
+```
+
+2. Modify your `next.config.mjs` file.
+
+```mjs
+// next.config.mjs
+import removeImports from 'next-remove-imports'
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true
+}
+
+/** @type {function(import("next").NextConfig): import("next").NextConfig}} */
+const removeImportsFun = removeImports({
+  test: /node_modules([\s\S]*?)\.(tsx|ts|js|mjs|jsx)$/,
+  matchImports: '\\.(less|css|scss|sass|styl)$'
+})
+
+export default removeImportsFun({
+  ...nextConfig,
+  webpack(config, options) {
+    return config
+  }
+})
+```
+
+3. Manually import the .css file.
+
+```ts
+import '@xyfinance/widget/dist/index.css'
+import dynamic from 'next/dynamic'
+
+const Widget = dynamic(
+  () => import('@xyfinance/widget').then((module) => module.Widget),
+  {
+    ssr: false
+  }
+)
+
+export function XyFinanceWidget() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: '100vh',
+        margin: '0px auto'
+      }}
+    >
+      <div
+        style={{
+          width: '480px'
+        }}
+      >
+        <Widget config={config} theme={theme} />
+      </div>
+    </div>
+  )
+}
+```
